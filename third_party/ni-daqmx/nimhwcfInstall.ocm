@@ -1,0 +1,24 @@
+#
+#   This file contains the information to install classes into the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nimhwcfu
+S, deletelib, nimhwcfp
+
+# add the entries for the nitcget component
+U, add, nNIMHWCF100::iPhysicalChannelSupplier, nimhwcfu
+U, add, nNIMHWCF100::iParentPhysicalChannelMapper, nimhwcfu
+U, add, nNIMHWCF100::iMREXParamBlock, nimhwcfu
+U, add, nNIMHWCF100::tMREXParamBlock, nimhwcfu
+U, add, nNIMHWCF100::tNetworkVersionDaqmx, nimhwcfu
+S, add, nNIMHWCF100::iPhysicalChannelSupplier, nimhwcfp
+S, add, nNIMHWCF100::iParentPhysicalChannelMapper, nimhwcfp
+S, add, nNIMHWCF100::iMREXParamBlock, nimhwcfp
+S, add, nNIMHWCF100::tMREXParamBlock, nimhwcfp
+S, add, nNIMHWCF100::tNetworkVersionDaqmx, nimhwcfp
+
+
+
+

@@ -1,0 +1,27 @@
+# nidmxfRemove.ocm - this file contains script commands
+#   for orbClassMap to unregister all DMXF classes.
+
+# Delete any existing entries.
+
+U, deletelib, nidmxfu
+S, deletelib, nidmxfp
+K, deletelib, nidmxfk
+
+U, deletelib, nimsrlu
+S, deletelib, nimsrlp
+K, deletelib, nimsrlk
+
+U, deletelib, nicalu
+S, deletelib, nicalp
+
+U, deletelib, nimslu
+S, deletelib, nimslp
+K, deletelib, nimslk
+
+U, deletelib, nimsaiu
+S, deletelib, nimsaip
+
+# Add the new entries.
+
+# End of script.
+

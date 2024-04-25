@@ -1,0 +1,32 @@
+#
+#   This file contains the information to install classes into the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nisweu
+U, deletelib, niswetu
+S, deletelib, niswep
+
+# add the entries for the nisweu and niswetu component
+
+# this section is for standAloneScanning
+
+U, add, nNISWE100::tStandaloneDeviceSyncExpert, nisweu
+U, add, nNISWE100::tStandaloneDeviceExpert, nisweu
+U, add, nNISWE100::tDigChannelExpertImpl, nisweu
+U, add, nNISWE100::tDigDeviceExpertImpl, nisweu
+U, add, nNISWE100::tSwitchScanningNonVolatileAttributes, nisweu
+
+#add entries for niswep (for pharlap)
+
+# this section is for standAloneScanning
+
+S, add, nNISWE100::tStandaloneDeviceSyncExpert, niswep
+S, add, nNISWE100::tStandaloneDeviceExpert, niswep
+S, add, nNISWE100::tDigChannelExpertImpl, niswep
+S, add, nNISWE100::tDigDeviceExpertImpl, niswep
+S, add, nNISWE100::tSwitchScanningNonVolatileAttributes, niswep
+# AUTO-GENERATED; DO NOT EDIT!
+U, add, nNISWE100::nGeneric::tChanARI, nisweu
+S, add, nNISWE100::nGeneric::tChanARI, niswep

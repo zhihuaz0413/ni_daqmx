@@ -1,0 +1,117 @@
+# nilmsInstall.ocm - this file contains script commands
+#   for orbClassMap to register all DMXF classes.
+
+# Delete any existing entries.
+
+U, deletelib, nilmsu
+S, deletelib, nilmsp
+K, deletelib, nilmsk
+
+# Add User-mode entries
+
+# add the entries for the nilmsl component
+U, add, nNILMSL100::tEmbeddedStatusStatusDescription, nilmsu
+K, add, nNILMSL100::tEmbeddedStatusStatusDescription, nilmsk
+S, add, nNILMSL100::tEmbeddedStatusStatusDescription, nilmsp
+
+# nNIMSRL100 kernel-mode primitive settings classes
+K,add,nNILMSRL100::tBufferInputStreamKernelModeSettings,nilmsk
+K,add,nNILMSRL100::tBufferOutputStreamKernelModeSettings,nilmsk
+K,add,nNILMSRL100::tUserKernelProxyPrimitiveSettings,nilmsk
+
+# nNIMSRL100 user-mode primitive settings classes
+U,add,nNILMSRL100::tBufferInputStreamKernelModeSettings,nilmsu
+U,add,nNILMSRL100::tBufferInputStreamUserModeSettings,nilmsu
+U,add,nNILMSRL100::tBufferOutputStreamKernelModeSettings,nilmsu
+U,add,nNILMSRL100::tBufferOutputStreamUserModeSettings,nilmsu
+U,add,nNILMSRL100::tUserKernelProxyPrimitiveSettings,nilmsu
+
+# nNIMSRL100 single-mode primitive settings classes
+S,add,nNILMSRL100::tBufferInputStreamKernelModeSettings,nilmsp
+S,add,nNILMSRL100::tBufferOutputStreamKernelModeSettings,nilmsp
+S,add,nNILMSRL100::tUserKernelProxyPrimitiveSettings,nilmsp
+S,add,nNILMSRL100::tBufferInputStreamUserModeSettings,nilmsp
+S,add,nNILMSRL100::tBufferOutputStreamUserModeSettings,nilmsp
+
+# nNIMSRL100 stream classes
+U,add,nNILMSRL100::tInputStreamProxy,nilmsu
+S,add,nNILMSRL100::tInputStreamProxy,nilmsp
+U,add,nNILMSRL100::tOutputStreamProxy,nilmsu
+S,add,nNILMSRL100::tOutputStreamProxy,nilmsp
+
+# Now add entries for the supervisors.
+
+# nNILMSRL100::tBufferInputStreamUserModeSupervisor
+U,add,nNILMSRL100::tBufferInputStreamUserModeSupervisor,nilmsu
+S,add,nNILMSRL100::tBufferInputStreamUserModeSupervisor,nilmsp
+
+# nNILMSRL100::tBufferInputStreamKernelModeSupervisor
+K,add,nNILMSRL100::tBufferInputStreamKernelModeSupervisor,nilmsk
+S,add,nNILMSRL100::tBufferInputStreamKernelModeSupervisor,nilmsp
+
+# nNILMSRL100::tBufferOutputStreamUserModeSupervisor
+U,add,nNILMSRL100::tBufferOutputStreamUserModeSupervisor,nilmsu
+S,add,nNILMSRL100::tBufferOutputStreamUserModeSupervisor,nilmsp
+
+# nNILMSRL100::tBufferOutputStreamKernelModeSupervisor
+K,add,nNILMSRL100::tBufferOutputStreamKernelModeSupervisor,nilmsk
+S,add,nNILMSRL100::tBufferOutputStreamKernelModeSupervisor,nilmsp
+
+# nNILMSRL100::tInputStreamProxyPrimitiveSupervisor
+U,add,nNILMSRL100::tInputStreamProxyPrimitiveSupervisor,nilmsu
+S,add,nNILMSRL100::tInputStreamProxyPrimitiveSupervisor,nilmsp
+
+# nNILMSRL100::tInputStreamDispatcherPrimitiveSupervisor
+K,add,nNILMSRL100::tInputStreamDispatcherPrimitiveSupervisor,nilmsk
+S,add,nNILMSRL100::tInputStreamDispatcherPrimitiveSupervisor,nilmsp
+
+# nNILMSRL100::tOutputStreamProxyPrimitiveSupervisor
+U,add,nNILMSRL100::tOutputStreamProxyPrimitiveSupervisor,nilmsu
+S,add,nNILMSRL100::tOutputStreamProxyPrimitiveSupervisor,nilmsp
+
+# nNILMSRL100::tOutputStreamDispatcherPrimitiveSupervisor
+K,add,nNILMSRL100::tOutputStreamDispatcherPrimitiveSupervisor,nilmsk
+S,add,nNILMSRL100::tOutputStreamDispatcherPrimitiveSupervisor,nilmsp
+
+#runtime
+U,add,nNILMSDR100::iDMAChannelSupervisor,nilmsu
+K,add,nNILMSDR100::iDMAChannelSupervisor,nilmsk
+S,add,nNILMSDR100::iDMAChannelSupervisor,nilmsp
+U,add,nNILMSDR100::iDMATransferCoordinatorSupervisor,nilmsu
+K,add,nNILMSDR100::iDMATransferCoordinatorSupervisor,nilmsk
+S,add,nNILMSDR100::iDMATransferCoordinatorSupervisor,nilmsp
+U,add,nNILMSDR100::tDMAConfigParamBlock,nilmsu
+K,add,nNILMSDR100::tDMAConfigParamBlock,nilmsk
+S,add,nNILMSDR100::tDMAConfigParamBlock,nilmsp
+U,add,nNILMSDR100::tDMATapPrimitiveSettings,nilmsu
+K,add,nNILMSDR100::tDMATapPrimitiveSettings,nilmsk
+S,add,nNILMSDR100::tDMATapPrimitiveSettings,nilmsp
+U,add,nNILMSDR100::tDMATapPrimitiveSettingsEx,nilmsu
+K,add,nNILMSDR100::tDMATapPrimitiveSettingsEx,nilmsk
+S,add,nNILMSDR100::tDMATapPrimitiveSettingsEx,nilmsp
+K,add,nNILMSDR100::tDMATapPrimitiveSupervisor,nilmsk
+S,add,nNILMSDR100::tDMATapPrimitiveSupervisor,nilmsp
+U,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSettings,nilmsu
+K,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSettings,nilmsk
+S,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSettings,nilmsp
+U,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSettingsEx,nilmsu
+K,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSettingsEx,nilmsk
+S,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSettingsEx,nilmsp
+K,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSupervisor,nilmsk
+S,add,nNILMSDR100::tDMATransferCoordinatorPrimitiveSupervisor,nilmsp
+U,add,nNILMSDR100::tExternalizableDMAAttribute,nilmsu
+K,add,nNILMSDR100::tExternalizableDMAAttribute,nilmsk
+S,add,nNILMSDR100::tExternalizableDMAAttribute,nilmsp
+
+#experts
+U, add, nNILMSDX100::iInputDMADataTransferExpert, nilmsu
+S, add, nNILMSDX100::iInputDMADataTransferExpert, nilmsp
+U, add, nNILMSDX100::tInputDMADataTransferExpert, nilmsu
+S, add, nNILMSDX100::tInputDMADataTransferExpert, nilmsp
+U, add, nNILMSDX100::iOutputDMADataTransferExpert, nilmsu
+S, add, nNILMSDX100::iOutputDMADataTransferExpert, nilmsp
+U, add, nNILMSDX100::tOutputDMADataTransferExpert, nilmsu
+S, add, nNILMSDX100::tOutputDMADataTransferExpert, nilmsp
+
+# End of script.
+

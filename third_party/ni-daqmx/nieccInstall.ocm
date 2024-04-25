@@ -1,0 +1,15 @@
+#******************************************************************************
+# nieccInstall.ocm
+#
+# Copyright (c) 2010-,
+# National Instruments Corporation.
+# All rights reserved.
+#******************************************************************************
+
+U, deletelib, nieccu
+K, deletelib, niecck
+S, deletelib, nieccp
+
+U, add, nNIECC100::tConnectionReestablishingSettings, nieccu
+U, add, nNIECC100::tConnectionReestablishingSupervisor, nieccu
+

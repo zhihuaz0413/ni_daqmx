@@ -1,0 +1,8 @@
+# nitiorRemove.ocm: Script commands for the orbClassMap utility.
+# Removes TIO counter runtime classes from the ORB class map
+
+# Clear out any existing entries
+
+U, deletelib, nitioru
+K, deletelib, nitiork
+S, deletelib, nitiorp

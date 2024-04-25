@@ -1,0 +1,28 @@
+# installExperts.ocm: Script commands for the orbClassMap utility.
+# Installs counter experts for ORB dynamic activation.
+
+# Clear out any existing entries
+U, deletelib, nistcxu
+S, deletelib, nistcxp
+
+# Add the new entries
+U, add, nNISTCX100::tSTCCounterDeviceExpert,        nistcxu
+U, add, nNISTCX100::tSTCCounterChannelExpert,       nistcxu
+U, add, nNISTCX100::tSTCCounterTimingExpert,        nistcxu
+U, add, nNISTCX100::tBaseMeasurementExpert,         nistcxu
+U, add, nNISTCX100::tEventCountingExpert,           nistcxu
+U, add, nNISTCX100::tPeriodMeasurementExpert,       nistcxu
+U, add, nNISTCX100::tPulseWidthMeasurementExpert,   nistcxu
+U, add, nNISTCX100::tSemiPeriodMeasurementExpert,   nistcxu
+U, add, nNISTCX100::tFrequencyMeasurementExpert,    nistcxu
+
+
+S, add, nNISTCX100::tSTCCounterDeviceExpert,        nistcxp
+S, add, nNISTCX100::tSTCCounterChannelExpert,       nistcxp
+S, add, nNISTCX100::tSTCCounterTimingExpert,        nistcxp
+S, add, nNISTCX100::tBaseMeasurementExpert,         nistcxp
+S, add, nNISTCX100::tEventCountingExpert,           nistcxp
+S, add, nNISTCX100::tPeriodMeasurementExpert,       nistcxp
+S, add, nNISTCX100::tPulseWidthMeasurementExpert,   nistcxp
+S, add, nNISTCX100::tSemiPeriodMeasurementExpert,   nistcxp
+S, add, nNISTCX100::tFrequencyMeasurementExpert,    nistcxp

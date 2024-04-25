@@ -1,0 +1,139 @@
+# installExperts.ocm: Script commands for the orbClassMap utility.
+# Installs counter experts for ORB dynamic activation.
+
+# Clear out any existing entries
+U, deletelib, nitioru
+K, deletelib, nitiork
+S, deletelib, nitiorp
+
+# Add the new entries
+
+#
+# General Purpose Counters
+#
+U,add,nNITIOR100::tTIOCounterSettings,nitioru
+K,add,nNITIOR100::tTIOCounterSettings,nitiork
+S,add,nNITIOR100::tTIOCounterSettings,nitiorp
+
+K,add,nNITIOR100::tTIOCounterSupervisor,nitiork
+S,add,nNITIOR100::tTIOCounterSupervisor,nitiorp
+
+U,add,nNITIOR100::tTIOCounterSplittingWriterSettings,nitioru
+K,add,nNITIOR100::tTIOCounterSplittingWriterSettings,nitiork
+S,add,nNITIOR100::tTIOCounterSplittingWriterSettings,nitiorp
+
+K,add,nNITIOR100::tTIOCounterSplittingWriterSupervisor,nitiork
+S,add,nNITIOR100::tTIOCounterSplittingWriterSupervisor,nitiorp
+
+#
+# GPS Counters
+#
+U,add,nNITIOR100::tTIOGPSSettings,nitioru
+K,add,nNITIOR100::tTIOGPSSettings,nitiork
+S,add,nNITIOR100::tTIOGPSSettings,nitiorp
+
+K,add,nNITIOR100::tTIOGPSSupervisor,nitiork
+S,add,nNITIOR100::tTIOGPSSupervisor,nitiorp
+
+#
+# Utility Counters
+#
+U,add,nNITIOR100::tTIOUtilCounterSettings,nitioru
+K,add,nNITIOR100::tTIOUtilCounterSettings,nitiork
+S,add,nNITIOR100::tTIOUtilCounterSettings,nitiorp
+
+K,add,nNITIOR100::tTIOUtilCounterSupervisor,nitiork
+S,add,nNITIOR100::tTIOUtilCounterSupervisor,nitiorp
+
+#
+# PFI Filter Line Resource
+#
+U,add,nNITIOR100::iFilterLineManager,nitioru
+K,add,nNITIOR100::iFilterLineManager,nitiork
+S,add,nNITIOR100::iFilterLineManager,nitiorp
+
+#
+# PFI Filter Line Resource
+#
+U,add,nNITIOR100::tTIOPFIFilterLineSettings,nitioru
+K,add,nNITIOR100::tTIOPFIFilterLineSettings,nitiork
+S,add,nNITIOR100::tTIOPFIFilterLineSettings,nitiorp
+
+K,add,nNITIOR100::tTIOPFIFilterLineSupervisor,nitiork
+S,add,nNITIOR100::tTIOPFIFilterLineSupervisor,nitiorp
+
+#
+#
+# tDriver files
+#
+U,add,nNITIOR100::tDriverClient,nitioru
+S,add,nNITIOR100::tDriverClient,nitiorp
+
+U,add,nNITIOR100::tDriverInitializer,nitioru
+S,add,nNITIOR100::tDriverInitializer,nitiorp
+
+K,add,nNITIOR100::tDriver,nitiork
+S,add,nNITIOR100::tDriver,nitiorp
+
+#
+# MRU Routables
+#
+K,add,nNITIOR100::iRoutableRegistrar,nitiork
+S,add,nNITIOR100::iRoutableRegistrar,nitiorp
+
+K,add,nNITIOR100::tPCI6601RoutableRegistrar,nitiork
+S,add,nNITIOR100::tPCI6601RoutableRegistrar,nitiorp
+
+K,add,nNITIOR100::tPCI6602RoutableRegistrar,nitiork
+S,add,nNITIOR100::tPCI6602RoutableRegistrar,nitiorp
+
+K,add,nNITIOR100::tPCI6624RoutableRegistrar,nitiork
+S,add,nNITIOR100::tPCI6624RoutableRegistrar,nitiorp
+
+K,add,nNITIOR100::tPXI6602RoutableRegistrar,nitiork
+S,add,nNITIOR100::tPXI6602RoutableRegistrar,nitiorp
+
+K,add,nNITIOR100::tPXI6608RoutableRegistrar,nitiork
+S,add,nNITIOR100::tPXI6608RoutableRegistrar,nitiorp
+
+K,add,nNITIOR100::tPXI6624RoutableRegistrar,nitiork
+S,add,nNITIOR100::tPXI6624RoutableRegistrar,nitiorp
+
+#
+# MRU Topographies
+#
+U,add,nPCI6601Device::tTopography,nitioru
+K,add,nPCI6601Device::tTopography,nitiork
+S,add,nPCI6601Device::tTopography,nitiorp
+
+U,add,nPCI6602Device::tTopography,nitioru
+K,add,nPCI6602Device::tTopography,nitiork
+S,add,nPCI6602Device::tTopography,nitiorp
+
+U,add,nPCI6624Device::tTopography,nitioru
+K,add,nPCI6624Device::tTopography,nitiork
+S,add,nPCI6624Device::tTopography,nitiorp
+
+U,add,nPXI6602Device::tTopography,nitioru
+K,add,nPXI6602Device::tTopography,nitiork
+S,add,nPXI6602Device::tTopography,nitiorp
+
+U,add,nPXI6624Device::tTopography,nitioru
+K,add,nPXI6624Device::tTopography,nitiork
+S,add,nPXI6624Device::tTopography,nitiorp
+
+U,add,nPXI6608Device::tTopography,nitioru
+K,add,nPXI6608Device::tTopography,nitiork
+S,add,nPXI6608Device::tTopography,nitiorp
+
+#
+# Digital Resources
+#
+K,add,nNITIOR100::tTIODigSupervisor, nitiork
+S,add,nNITIOR100::tTIODigSupervisor, nitiorp
+
+#
+# Network Version
+#
+U,add,nNITIOR100::tNetworkVersion, nitioru
+S,add,nNITIOR100::tNetworkVersion, nitiorp

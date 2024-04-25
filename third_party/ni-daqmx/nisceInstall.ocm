@@ -1,0 +1,14 @@
+U,deletelib,nisceu
+
+U,add,nNISCE100::nNIEOL_1_0::tEOLPhysicalChannelMapper,nisceu
+U,add,nNISCE100::nNIEOL_1_0::tEOLPhysicalChannelSupplier,nisceu
+
+K,deletelib,niscek
+
+
+# single-mode classes (for pharlap)
+S,deletelib,niscep
+
+S,add,nNISCE100::nNIEOL_1_0::tEOLPhysicalChannelMapper,niscep
+S,add,nNISCE100::nNIEOL_1_0::tEOLPhysicalChannelSupplier,niscep
+

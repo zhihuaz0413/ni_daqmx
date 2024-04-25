@@ -1,0 +1,209 @@
+# nisdigInstall.ocm - adds all nisdig entries to the
+#  orbClassMap
+
+# Delete any existing entries.
+U, deletelib, nisdigu
+K, deletelib, nisdigk
+S, deletelib, nisdigp
+
+# Add the new entries.
+U, add, nNIEFR100::t8255ImmediateDigitalSettings, nisdigu
+K, add, nNIEFR100::t8255ImmediateDigitalSettings, nisdigk
+S, add, nNIEFR100::t8255ImmediateDigitalSettings, nisdigp
+
+U, add, nNIEFR100::t8255HandshakingSettings, nisdigu
+K, add, nNIEFR100::t8255HandshakingSettings, nisdigk
+S, add, nNIEFR100::t8255HandshakingSettings, nisdigp
+
+U, add, nNIEFR100::t8255InterruptHandshakingSettings, nisdigu
+K, add, nNIEFR100::t8255InterruptHandshakingSettings, nisdigk
+S, add, nNIEFR100::t8255InterruptHandshakingSettings, nisdigp
+
+U, add, nNIEFX100::t8255DeviceExpert, nisdigu
+S, add, nNIEFX100::t8255DeviceExpert, nisdigp
+
+U, add, nNIEFX100::t8255StreamSettingsBuilder, nisdigu
+S, add, nNIEFX100::t8255StreamSettingsBuilder, nisdigp
+
+U, add, nNISDCOMMON000::tDigControlProviderExpertWithRouting, nisdigu
+S, add, nNISDCOMMON000::tDigControlProviderExpertWithRouting, nisdigp
+
+U, add, nNISDCX000::tChangeDetectionStreamSettingsBuilder, nisdigu
+S, add, nNISDCX000::tChangeDetectionStreamSettingsBuilder, nisdigp
+
+U, add, nNISDCX000::tStaticDigitalChannelExpert, nisdigu
+S, add, nNISDCX000::tStaticDigitalChannelExpert, nisdigp
+
+U, add, nNISDCX000::tStaticDigitalDeviceExpert, nisdigu
+S, add, nNISDCX000::tStaticDigitalDeviceExpert, nisdigp
+
+U, add, nNISDCX000::tStaticDigitalStreamSettingsBuilder, nisdigu
+S, add, nNISDCX000::tStaticDigitalStreamSettingsBuilder, nisdigp
+
+U, add, nNISDCX000::tStaticDigitalTimingExpert, nisdigu
+S, add, nNISDCX000::tStaticDigitalTimingExpert, nisdigp
+
+U, add, nNISDDX000::tProgPowerupDeviceExpert, nisdigu
+S, add, nNISDDX000::tProgPowerupDeviceExpert, nisdigp
+
+U, add, nNISDDX000::tTristateLogicLevelDeviceExpert, nisdigu
+S, add, nNISDDX000::tTristateLogicLevelDeviceExpert, nisdigp
+
+U, add, nNISDDX000::tWatchdogTimerDeviceExpert, nisdigu
+S, add, nNISDDX000::tWatchdogTimerDeviceExpert, nisdigp
+
+U, add, nNISDDX000::tDeviceCapabilities, nisdigu
+S, add, nNISDDX000::tDeviceCapabilities, nisdigp
+
+U, add, nNISDCX000::tSimpleEventCounterDeviceExpert, nisdigu
+U, add, nNISDCX000::tSimpleEventCounterTimingExpert, nisdigu
+U, add, nNISDCX000::tSimpleEventCounterApplication, nisdigu
+
+U, add, nPCIInputOutput::tTopography, nisdigu
+K, add, nPCIInputOutput::tTopography, nisdigk
+S, add, nPCIInputOutput::tTopography, nisdigp
+
+U, add, nPXIInputOutput::tTopography, nisdigu
+K, add, nPXIInputOutput::tTopography, nisdigk
+S, add, nPXIInputOutput::tTopography, nisdigp
+
+U, add, nPXIInputOnly::tTopography, nisdigu
+K, add, nPXIInputOnly::tTopography, nisdigk
+S, add, nPXIInputOnly::tTopography, nisdigp
+
+U, add, ncounter::tTopography, nisdigu
+K, add, ncounter::tTopography, nisdigk
+
+U, add, nNISDR000::tDigEdgeIntSettings, nisdigu
+S, add, nNISDR000::tDigEdgeIntSettings, nisdigp
+
+U, add, nNISDR000::tDriverClient, nisdigu
+S, add, nNISDR000::tDriverClient, nisdigp
+
+U, add, nNISDR000::tDumbDriverClient, nisdigu
+
+U, add, nNISDR000::tDriverInitializer, nisdigu
+S, add, nNISDR000::tDriverInitializer, nisdigp
+
+U, add, nNISDR000::t650xFirmwareUpdaterDriverInitializer, nisdigu
+
+U, add, nNISDR000::tNetworkVersion, nisdigu
+S, add, nNISDR000::tNetworkVersion, nisdigp
+
+U, add, nNISDR000::tProgPowerupSettings, nisdigu
+S, add, nNISDR000::tProgPowerupSettings, nisdigp
+
+U, add, nNISDR000::tTristateLogicLevelSettings, nisdigu
+S, add, nNISDR000::tTristateLogicLevelSettings, nisdigp
+
+U, add, nNISDR000::tSDIGImmedDigSettings, nisdigu
+S, add, nNISDR000::tSDIGImmedDigSettings, nisdigp
+
+U, add, nNISDR000::tThroughputLimiterSettings, nisdigu
+S, add, nNISDR000::tThroughputLimiterSettings, nisdigp
+
+U, add, nNISDR000::tWatchdogSettings, nisdigu
+S, add, nNISDR000::tWatchdogSettings, nisdigp
+
+U, add, nNISDR000::tSimpleEventCounterPrimitiveSettings, nisdigu
+
+U, add, nNISDCOMMON000::tPhysicalChannelSupplier, nisdigu
+S, add, nNISDCOMMON000::tPhysicalChannelSupplier, nisdigp
+
+K, add, nNIEFR100::t8255Identifier, nisdigk
+S, add, nNIEFR100::t8255Identifier, nisdigp
+
+K, add, nNIEFR100::t8255ImmediateDigitalSupervisor, nisdigk
+S, add, nNIEFR100::t8255ImmediateDigitalSupervisor, nisdigp
+
+K, add, nNIEFR100::t8255ImmediateDigitalResource, nisdigk
+S, add, nNIEFR100::t8255ImmediateDigitalResource, nisdigp
+
+K, add, nNIEFR100::t8255HandshakingReaderSupervisor, nisdigk
+S, add, nNIEFR100::t8255HandshakingReaderSupervisor, nisdigp
+
+K, add, nNIEFR100::t8255HandshakingWriterSupervisor, nisdigk
+S, add, nNIEFR100::t8255HandshakingWriterSupervisor, nisdigp
+
+K, add, nNIEFR100::t8255InterruptHandshakingReaderSupervisor, nisdigk
+S, add, nNIEFR100::t8255InterruptHandshakingReaderSupervisor, nisdigp
+
+K, add, nNIEFR100::t8255InterruptHandshakingWriterSupervisor, nisdigk
+S, add, nNIEFR100::t8255InterruptHandshakingWriterSupervisor, nisdigp
+
+K, add, nNISDR000::iRoutableRegistrar, nisdigk
+S, add, nNISDR000::iRoutableRegistrar, nisdigp
+
+K, add, nNISDR000::t6503_6508Driver, nisdigk
+S, add, nNISDR000::t6503_6508Driver, nisdigp
+
+K, add, nNISDR000::t650xFirmwareUpdaterDriver, nisdigk
+
+K, add, nNISDR000::t6527Driver, nisdigk
+S, add, nNISDR000::t6527Driver, nisdigp
+
+K, add, nNISDR000::tFusionCommonDriver, nisdigk
+
+K, add, nNISDR000::tCommonDriver, nisdigk
+S, add, nNISDR000::tCommonDriver, nisdigp
+
+K, add, nNISDR000::tDigEdgeIntSettings, nisdigk
+
+K, add, nNISDR000::tDigEdgeIntSup, nisdigk
+S, add, nNISDR000::tDigEdgeIntSup, nisdigp
+
+K, add, nNISDR000::tPCIRoutableRegistrar, nisdigk
+S, add, nNISDR000::tPCIRoutableRegistrar, nisdigp
+
+K, add, nNISDR000::tProgPowerupSettings, nisdigk
+
+K, add, nNISDR000::tTristateLogicLevelSettings, nisdigk
+
+K, add, nNISDR000::tProgPowerupSup, nisdigk
+S, add, nNISDR000::tProgPowerupSup, nisdigp
+
+K, add, nNISDR000::tTristateLogicLevelSup, nisdigk
+S, add, nNISDR000::tTristateLogicLevelSup, nisdigp
+
+K, add, nNISDR000::tPXIRoutableRegistrar, nisdigk
+S, add, nNISDR000::tPXIRoutableRegistrar, nisdigp
+
+K, add, nNISDR000::tPXIRoutableRegistrarForInputOnly, nisdigk
+S, add, nNISDR000::tPXIRoutableRegistrarForInputOnly, nisdigp
+
+K, add, nNISDR000::tSDIGImmedDigSettings, nisdigk
+
+K, add, nNISDR000::tSDIGImmedDigSupervisor, nisdigk
+U, add, nNISDR000::tUserModeSDIGImmedDigSupervisor, nisdigu
+S, add, nNISDR000::tSDIGImmedDigSupervisor, nisdigp
+
+K, add, nNISDR000::tThroughputLimiterSettings, nisdigk
+
+K, add, nNISDR000::tThroughputLimiterWriterSup, nisdigk
+S, add, nNISDR000::tThroughputLimiterWriterSup, nisdigp
+
+K, add, nNISDR000::tWatchdogSettings, nisdigk
+
+K, add, nNISDR000::tSimpleEventCounterPrimitiveSettings, nisdigk
+K, add, nNISDR000::tSimpleEventCounterSupervisor, nisdigk
+
+K, add, nNISDR000::tWatchdogSup, nisdigk
+S, add, nNISDR000::tWatchdogSup, nisdigp
+
+# End of script.
+# AUTO-GENERATED; DO NOT EDIT!
+U, add, nNISDDX000::tWatchdogDeviceWithRTSIAttributeRangeInitializer, nisdigu
+S, add, nNISDDX000::tWatchdogDeviceWithRTSIAttributeRangeInitializer, nisdigp
+U, add, nNISDDX000::tWatchdogDeviceWithoutRTSIAttributeRangeInitializer, nisdigu
+S, add, nNISDDX000::tWatchdogDeviceWithoutRTSIAttributeRangeInitializer, nisdigp
+# AUTO-GENERATED; DO NOT EDIT!
+U, add, nNISDCX000::tStaticDigitalChannelAttributeRangeInitializer, nisdigu
+S, add, nNISDCX000::tStaticDigitalChannelAttributeRangeInitializer, nisdigp
+U, add, nNISDCX000::tStaticDigitalChannel_USB6525AttributeRangeInitializer, nisdigu
+S, add, nNISDCX000::tStaticDigitalChannel_USB6525AttributeRangeInitializer, nisdigp
+U, add, nNISDCX000::tStaticDigitalDeviceAttributeRangeInitializer, nisdigu
+S, add, nNISDCX000::tStaticDigitalDeviceAttributeRangeInitializer, nisdigp
+U, add, nNISDCX000::tStaticDigitalTimingAttributeRangeInitializer, nisdigu
+S, add, nNISDCX000::tStaticDigitalTimingAttributeRangeInitializer, nisdigp
+U, add, nNISDCX000::tStaticDigitalOnDemandTimingAttributeRangeInitializer, nisdigu
+S, add, nNISDCX000::tStaticDigitalOnDemandTimingAttributeRangeInitializer, nisdigp

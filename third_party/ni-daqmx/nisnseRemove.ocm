@@ -1,0 +1,12 @@
+# nisnseRemove.ocm - this file contains script commands
+#   for orbClassMap to unregister all SNSE classes.
+
+# Delete any existing entries.
+
+U, deletelib, nisnseu
+S, deletelib, nisnsep
+
+# Add the new entries.
+
+# End of script.
+

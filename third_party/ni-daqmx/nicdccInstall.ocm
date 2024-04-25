@@ -1,0 +1,24 @@
+#******************************************************************************
+# nicdccInstall.ocm
+#
+# Copyright (c) 2011-,
+# National Instruments Corporation.
+# All rights reserved.
+#******************************************************************************
+
+U, deletelib, nicdccu
+K, deletelib, nicdcck
+S, deletelib, nicdccp
+
+U, add, nNICDCC100::tChassisDeviceResetSentinelSettings, nicdccu
+U, add, nNICDCC100::tCDAQChassisWatchdogManagerSettings, nicdccu
+
+K, add, nNICDCC100::tChassisDeviceResetSentinelSettings, nicdcck
+K, add, nNICDCC100::tChassisDeviceResetSentinelSupervisor, nicdcck
+K, add, nNICDCC100::tCDAQChassisWatchdogManagerSettings, nicdcck
+K, add, nNICDCC100::tCDAQChassisWatchdogManagerSupervisor, nicdcck
+
+S, add, nNICDCC100::tChassisDeviceResetSentinelSettings, nicdccp
+S, add, nNICDCC100::tChassisDeviceResetSentinelSupervisor, nicdccp
+S, add, nNICDCC100::tCDAQChassisWatchdogManagerSettings, nicdccp
+S, add, nNICDCC100::tCDAQChassisWatchdogManagerSupervisor, nicdccp

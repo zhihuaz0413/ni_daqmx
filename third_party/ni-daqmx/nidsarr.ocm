@@ -1,0 +1,8 @@
+U,deletelib,nidsaru
+K,deletelib,nidsark
+S,deletelib,nidsarp
+
+# We also need to remove any old dsax remnants
+U,deletelib,nidsaxu
+K,deletelib,nidsaxk
+S,deletelib,nidsaxp

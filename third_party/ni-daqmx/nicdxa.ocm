@@ -1,0 +1,39 @@
+# Clear out any existing entries
+U, deletelib, nicdxu
+S, deletelib, nicdxp
+
+#experts
+U, add, nNICDX100::tDigDeviceExpert, nicdxu
+
+U, add, nNICDX100::tDigChannelExpert, nicdxu
+
+U, add, nNICDX100::iDigControlProviderExpert, nicdxu
+
+U, add, nNICDX100::tDigControlProviderExpert, nicdxu
+
+U, add, nNICDX100::iDigStreamBuilder, nicdxu
+
+U, add, nNICDX100::tDigStreamSettingsBuilder, nicdxu
+
+U, add, nNICDX100::tSimpleDigTimingExpert, nicdxu
+
+S, add, nNICDX100::tDigDeviceExpert, nicdxp
+
+S, add, nNICDX100::tDigChannelExpert, nicdxp
+
+S, add, nNICDX100::iDigControlProviderExpert, nicdxp
+
+S, add, nNICDX100::tDigControlProviderExpert, nicdxp
+
+S, add, nNICDX100::iDigStreamBuilder, nicdxp
+
+S, add, nNICDX100::tDigStreamSettingsBuilder, nicdxp
+
+S, add, nNICDX100::tSimpleDigTimingExpert, nicdxp
+# AUTO-GENERATED; DO NOT EDIT!
+U, add, nNICDX100::tDigChannelAttributeRangeInitializer, nicdxu
+S, add, nNICDX100::tDigChannelAttributeRangeInitializer, nicdxp
+U, add, nNICDX100::tDigTimingAttributeRangeInitializer, nicdxu
+S, add, nNICDX100::tDigTimingAttributeRangeInitializer, nicdxp
+U, add, nNICDX100::tDigDeviceAttributeRangeInitializer, nicdxu
+S, add, nNICDX100::tDigDeviceAttributeRangeInitializer, nicdxp

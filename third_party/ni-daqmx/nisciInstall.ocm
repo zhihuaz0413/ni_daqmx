@@ -1,0 +1,38 @@
+#
+#   This file contains the information to install classes into the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nisciu
+S, deletelib, niscip
+
+# add the entries for the nisci component
+U, add, nNISCI100::iAccessoryControlOperationSequence, nisciu
+U, add, nNISCI100::iChassisFIFO, nisciu
+U, add, nNISCI100::iChassisSlotInfo, nisciu
+U, add, nNISCI100::iSwitchScanningInterface, nisciu
+U, add, nNISCI100::iSynchronousScanningMaster, nisciu
+U, add, nNISCI100::iSynchronousScanningProtocol, nisciu
+U, add, nNISCI100::iTrackHoldProtocol, nisciu
+U, add, nNISCI100::tAccessoryControlOperationSequence, nisciu
+U, add, nNISCI100::tChassisFIFO, nisciu
+U, add, nNISCI100::tChassisSlotInfo, nisciu
+U, add, nNISCI100::tSynchronousScanningMaster, nisciu
+U, add, nNISCI100::tSynchronousScanningProtocol, nisciu
+U, add, nNISCI100::tTrackHoldProtocol, nisciu
+
+S, add, nNISCI100::iAccessoryControlOperationSequence, niscip
+S, add, nNISCI100::iChassisFIFO, niscip
+S, add, nNISCI100::iChassisSlotInfo, niscip
+S, add, nNISCI100::iSwitchScanningInterface, niscip
+S, add, nNISCI100::iSynchronousScanningMaster, niscip
+S, add, nNISCI100::iSynchronousScanningProtocol, niscip
+S, add, nNISCI100::iTrackHoldProtocol, niscip
+S, add, nNISCI100::tAccessoryControlOperationSequence, niscip
+S, add, nNISCI100::tChassisFIFO, niscip
+S, add, nNISCI100::tChassisSlotInfo, niscip
+S, add, nNISCI100::tSynchronousScanningMaster, niscip
+S, add, nNISCI100::tSynchronousScanningProtocol, niscip
+S, add, nNISCI100::tTrackHoldProtocol, niscip
+

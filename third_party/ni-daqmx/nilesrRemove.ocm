@@ -1,0 +1,8 @@
+#
+#   This file contains the information to uninstall classes from the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nilesru
+S, deletelib, nilesrp

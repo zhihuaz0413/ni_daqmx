@@ -1,0 +1,8 @@
+# nisdigRemove.ocm - removes all nisdig entries from the
+#  orbClassMap
+
+# Delete any existing entries.
+U, deletelib, nisdigu
+K, deletelib, nisdigk
+
+# End of script.

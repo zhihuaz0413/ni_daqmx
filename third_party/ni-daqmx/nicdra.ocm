@@ -1,0 +1,84 @@
+# Clear out any existing entries
+U, deletelib, nicdru
+K, deletelib, nicdrk
+S, deletelib, nicdrp
+
+#settings objects
+K, add, nNICDR100::tImmedDigSettings, nicdrk
+U, add, nNICDR100::tImmedDigSettings, nicdru
+S, add, nNICDR100::tImmedDigSettings, nicdrp
+
+K, add, nNICDR110::tImmedDigSettings, nicdrk
+U, add, nNICDR110::tImmedDigSettings, nicdru
+S, add, nNICDR110::tImmedDigSettings, nicdrp
+
+K, add, nNICDR100::tSCXICommSettings, nicdrk
+U, add, nNICDR100::tSCXICommSettings, nicdru
+S, add, nNICDR100::tSCXICommSettings, nicdrp
+
+K, add, nNICDR120::tSCXICommSettings, nicdrk
+U, add, nNICDR120::tSCXICommSettings, nicdru
+S, add, nNICDR120::tSCXICommSettings, nicdrp
+
+K, add, nNICDR100::tImmedDigStreamSettings, nicdrk
+U, add, nNICDR100::tImmedDigStreamSettings, nicdru
+S, add, nNICDR100::tImmedDigStreamSettings, nicdrp
+
+K, add, nNICDR100::tSplittingCombiningSettings, nicdrk
+U, add, nNICDR100::tSplittingCombiningSettings, nicdru
+S, add, nNICDR100::tSplittingCombiningSettings, nicdrp
+
+K, add, nNICDR100::tDigStreamSettings, nicdrk
+U, add, nNICDR100::tDigStreamSettings, nicdru
+S, add, nNICDR100::tDigStreamSettings, nicdrp
+
+#supervisor objects
+K, add, nNICDR100::tImmedDigWriterSup, nicdrk
+U, add, nNICDR100::tImmedDigWriterSup, nicdru
+S, add, nNICDR100::tImmedDigWriterSup, nicdrp
+
+K, add, nNICDR100::tImmedDigReaderSup, nicdrk
+U, add, nNICDR100::tImmedDigReaderSup, nicdru
+S, add, nNICDR100::tImmedDigReaderSup, nicdrp
+
+K, add, nNICDR100::tImmedDigSup, nicdrk
+U, add, nNICDR100::tImmedDigSup, nicdru
+S, add, nNICDR100::tImmedDigSup, nicdrp
+
+K, add, nNICDR110::tImmedDigSup, nicdrk
+U, add, nNICDR110::tImmedDigSup, nicdru
+S, add, nNICDR110::tImmedDigSup, nicdrp
+
+K, add, nNICDR100::tDigSplittingWriterSup, nicdrk
+U, add, nNICDR100::tDigSplittingWriterSup, nicdru
+S, add, nNICDR100::tDigSplittingWriterSup, nicdrp
+
+K, add, nNICDR100::tDigCombiningReaderSup, nicdrk
+U, add, nNICDR100::tDigCombiningReaderSup, nicdru
+S, add, nNICDR100::tDigCombiningReaderSup, nicdrp
+
+K, add, nNICDR100::tDigInputStreamSup, nicdrk
+U, add, nNICDR100::tDigInputStreamSup, nicdru
+S, add, nNICDR100::tDigInputStreamSup, nicdrp
+
+K, add, nNICDR100::tDigOutputStreamSup, nicdrk
+U, add, nNICDR100::tDigOutputStreamSup, nicdru
+S, add, nNICDR100::tDigOutputStreamSup, nicdrp
+
+K, add, nNICDR100::tSCXICommSup, nicdrk
+S, add, nNICDR100::tSCXICommSup, nicdrp
+
+K, add, nNICDR110::tSCXICommSup, nicdrk
+S, add, nNICDR110::tSCXICommSup, nicdrp
+
+K, add, nNICDR120::tSCXICommSup, nicdrk
+S, add, nNICDR120::tSCXICommSup, nicdrp
+
+#resource objects
+K, add, nNICDR110::tDigMaskedIdentifier, nicdrk
+U, add, nNICDR110::tDigMaskedIdentifier, nicdru
+S, add, nNICDR110::tDigMaskedIdentifier, nicdrp
+
+K, add, nNICDR100::tSCXIMaskedIdentifier, nicdrk
+U, add, nNICDR100::tSCXIMaskedIdentifier, nicdru
+S, add, nNICDR100::tSCXIMaskedIdentifier, nicdrp

@@ -1,0 +1,15 @@
+#
+#   This file contains the information to install classes into the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nicesru
+S, deletelib, nicesrp
+
+# add the entries for the nicesr component
+# Create entries for the nicesr component here
+U, add, nNICESR100::tCEnglishStringPack, nicesru
+
+# single mode - pharlap entries
+S, add, nNICESR100::tCEnglishStringPack, nicesrp

@@ -1,0 +1,36 @@
+#
+#   This file contains the information to install classes into the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nilesru
+S, deletelib, nilesrp
+
+# add the entries for the nilesr component
+U, add, nNILESR100::tLVEnglishStringPack, nilesru
+U, add, nNILESR100::tLVEnglishNoTagsStringPack, nilesru
+U, add, nNILESR100::tLVFrenchStringPack, nilesru
+U, add, nNILESR100::tLVFrenchNoTagsStringPack, nilesru
+U, add, nNILESR100::tLVGermanStringPack, nilesru
+U, add, nNILESR100::tLVGermanNoTagsStringPack, nilesru
+U, add, nNILESR100::tLVJapaneseStringPack, nilesru
+U, add, nNILESR100::tLVJapaneseNoTagsStringPack, nilesru
+U, add, nNILESR100::tLVKoreanStringPack, nilesru
+U, add, nNILESR100::tLVKoreanNoTagsStringPack, nilesru
+U, add, nNILESR100::tLVChinese_sStringPack, nilesru
+U, add, nNILESR100::tLVChinese_sNoTagsStringPack, nilesru
+
+# single mode - pharlap entries
+S, add, nNILESR100::tLVEnglishStringPack, nilesrp
+S, add, nNILESR100::tLVEnglishNoTagsStringPack, nilesrp
+S, add, nNILESR100::tLVFrenchStringPack, nilesrp
+S, add, nNILESR100::tLVFrenchNoTagsStringPack, nilesrp
+S, add, nNILESR100::tLVGermanStringPack, nilesrp
+S, add, nNILESR100::tLVGermanNoTagsStringPack, nilesrp
+S, add, nNILESR100::tLVJapaneseStringPack, nilesrp
+S, add, nNILESR100::tLVJapaneseNoTagsStringPack, nilesrp
+S, add, nNILESR100::tLVKoreanStringPack, nilesrp
+S, add, nNILESR100::tLVKoreanNoTagsStringPack, nilesrp
+S, add, nNILESR100::tLVChinese_sStringPack, nilesrp
+S, add, nNILESR100::tLVChinese_sNoTagsStringPack, nilesrp

@@ -1,0 +1,7 @@
+# uninstallExperts.ocm: Script commands for the orbClassMap utility.
+# Uninstalls counter experts from ORB dynamic activation.
+
+# Clear out any existing entries
+
+U, deletelib, nistcxu
+S, deletelib, nistcxp

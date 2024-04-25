@@ -1,0 +1,30 @@
+# installExperts.ocm: Script commands for the orbClassMap utility.
+# Installs counter experts for ORB dynamic activation.
+
+# Clear out any existing entries
+U, deletelib, nistcru
+K, deletelib, nistcrk
+S, deletelib, nistcrp
+
+# Add the new entries
+U, add, nNISTCR100::tSTCCounterPrimitiveSettings, nistcru
+K, add, nNISTCR100::tSTCCounterPrimitiveSettings, nistcrk
+S, add, nNISTCR100::tSTCCounterPrimitiveSettings, nistcrp
+K, add, nNISTCR100::tSTCCounterPrimitiveSupervisor, nistcrk
+S, add, nNISTCR100::tSTCCounterPrimitiveSupervisor, nistcrp
+
+U, add, nNISTCR100::tSTCCounterSplittingWriterSettings, nistcru
+K, add, nNISTCR100::tSTCCounterSplittingWriterSettings, nistcrk
+S, add, nNISTCR100::tSTCCounterSplittingWriterSettings, nistcrp
+K, add, nNISTCR100::tSTCCounterSplittingWriterSupervisor, nistcrk
+S, add, nNISTCR100::tSTCCounterSplittingWriterSupervisor, nistcrp
+
+K, add, nNISTCR100::tSTCCounterResource, nistcrk
+S, add, nNISTCR100::tSTCCounterResource, nistcrp
+U, add, nNISTCR100::tSTCFREQOUTPrimitiveSettings, nistcru
+K, add, nNISTCR100::tSTCFREQOUTPrimitiveSettings, nistcrk
+S, add, nNISTCR100::tSTCFREQOUTPrimitiveSettings, nistcrp
+K, add, nNISTCR100::tSTCFREQOUTPrimitiveSupervisor, nistcrk
+S, add, nNISTCR100::tSTCFREQOUTPrimitiveSupervisor, nistcrp
+K, add, nNISTCR100::tSTCFREQOUTResource, nistcrk
+S, add, nNISTCR100::tSTCFREQOUTResource, nistcrp

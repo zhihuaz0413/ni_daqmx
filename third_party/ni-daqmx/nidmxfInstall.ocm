@@ -1,0 +1,418 @@
+# nidmxfInstall.ocm - this file contains script commands
+#   for orbClassMap to register all DMXF classes.
+
+# Delete any existing entries.
+
+U, deletelib, nidmxfu
+S, deletelib, nidmxfp
+K, deletelib, nidmxfk
+
+U, deletelib, nimsrlu
+S, deletelib, nimsrlp
+K, deletelib, nimsrlk
+
+U, deletelib, nicalu
+S, deletelib, nicalp
+
+U, deletelib, nimslu
+S, deletelib, nimslp
+K, deletelib, nimslk
+
+U, deletelib, nimsaiu
+S, deletelib, nimsaip
+
+U, deletelib, nimstsu
+k, deletelib, nimstsk
+S, deletelib, nimstsp
+
+U, deletelib, nimercu
+S, deletelib, nimercp
+
+
+# Add User-mode entries
+
+U, add, nNICAL100::tSoftwareBridgeNullCalibration, nidmxfu
+S, add, nNICAL100::tSoftwareBridgeNullCalibration, nidmxfp
+U, add, nNICAL100::tBasicShuntCalibration, nidmxfu
+S, add, nNICAL100::tBasicShuntCalibration, nidmxfp
+
+U, add, nNIMSAI100::tDummyExpert, nidmxfu
+S, add, nNIMSAI100::tDummyExpert, nidmxfp
+U, add, nNIMSAI100::iTimingSource, nidmxfu
+S, add, nNIMSAI100::iTimingSource, nidmxfp
+U, add, nNIMSAI100::tTimingSourceFrequency, nidmxfu
+S, add, nNIMSAI100::tTimingSourceFrequency, nidmxfp
+U, add, nNIMSAI100::tTimingSourceDigitalChangeDetection, nidmxfu
+S, add, nNIMSAI100::tTimingSourceDigitalChangeDetection, nidmxfp
+U, add, nNIMSAI100::tTimingSourceDigitalEdgeUsingCounter, nidmxfu
+S, add, nNIMSAI100::tTimingSourceDigitalEdgeUsingCounter, nidmxfp
+U, add, nNIMSAI100::tTimingSourceSignalFromTask, nidmxfu
+S, add, nNIMSAI100::tTimingSourceSignalFromTask, nidmxfp
+
+# U, add, nNIMAS100::iAttributeStateFacade, nidmxfu
+# U, add, nNIMAS100::iBufferAttributeAccessor, nidmxfu
+# U, add, nNIMAS100::iChannelContextExpander, nidmxfu
+# U, add, nNIMAS100::iChannelManager, nidmxfu
+# U, add, nNIMAS100::iDevicePathManager, nidmxfu
+# U, add, nNIMAS100::iRuntimeController, nidmxfu
+# U, add, nNIMAS100::iSoftwareEventGenerator, nidmxfu
+# U, add, nNIMAS100::iStateAccessor, nidmxfu
+# U, add, nNIMAS100::iTaskDoneAccessor, nidmxfu
+# U, add, nNIMAS100::iTaskManager, nidmxfu
+U, add, nNIMAS100::tAssistantTaskExpert, nidmxfu
+S, add, nNIMAS100::tAssistantTaskExpert, nidmxfp
+U, add, nNIMAS100::tSingleRootDeviceExpertSynchronizationStrategy, nidmxfu
+S, add, nNIMAS100::tSingleRootDeviceExpertSynchronizationStrategy, nidmxfp
+U, add, nNIMAS100::tDSARefClockSyncStrategy, nidmxfu
+S, add, nNIMAS100::tDSARefClockSyncStrategy, nidmxfp
+U, add, nNIMAS100::tDSASampleTimebaseSyncStrategy, nidmxfu
+S, add, nNIMAS100::tDSASampleTimebaseSyncStrategy, nidmxfp
+U, add, nNIMAS100::tElvis2SyncStrategy, nidmxfu
+S, add, nNIMAS100::tElvis2SyncStrategy, nidmxfp
+U, add, nNIMAS100::tRaptorSyncStrategy, nidmxfu
+S, add, nNIMAS100::tRaptorSyncStrategy, nidmxfp
+U, add, nNIMAS100::tMasterTimebaseSyncStrategy, nidmxfu
+S, add, nNIMAS100::tMasterTimebaseSyncStrategy, nidmxfp
+U, add, nNIMAS100::tReferenceClockSyncStrategy, nidmxfu
+S, add, nNIMAS100::tReferenceClockSyncStrategy, nidmxfp
+U, add, nNIMAS100::tMixedSyncStrategy, nidmxfu
+S, add, nNIMAS100::tMixedSyncStrategy, nidmxfp
+
+# U, add, nNIMEL200::iAttributeRangeInitializer, nidmxfu
+# U, add, nNIMEL200::iAttributeTransaction, nidmxfu
+# U, add, nNIMEL200::iBufferExpert, nidmxfu
+# U, add, nNIMEL200::iChannelExpertMultiAttributeAccessor, nidmxfu
+# U, add, nNIMEL200::iChannelExpertScaler, nidmxfu
+# U, add, nNIMEL200::iControlProviderExpert, nidmxfu
+# U, add, nNIMEL200::iDeviceExpert, nidmxfu
+# U, add, nNIMEL200::iDeviceExpertAccessor, nidmxfu
+# U, add, nNIMEL200::iDeviceExpertMultiAttributeAccessor, nidmxfu
+# U, add, nNIMEL200::iTimingExpert, nidmxfu
+# U, add, nNIMEL200::iWatchdogExpert, nidmxfu
+U, add, nNIMEL200::tContinuousRangeErrorDescription<f64>, nidmxfu
+U, add, nNIMEL200::tContinuousRangeErrorDescription<i32>, nidmxfu
+U, add, nNIMEL200::tContinuousRangeErrorDescription<u32>, nidmxfu
+U, add, nNIMEL200::tContinuousRangeErrorDescription<u64>, nidmxfu
+U, add, nNIMEL200::tContinuousRangeErrorDescription<i64>, nidmxfu
+U, add, nNIMEL200::tDiscreteRangeErrorDescription<f64>, nidmxfu
+U, add, nNIMEL200::tDiscreteRangeErrorDescription<i32>, nidmxfu
+U, add, nNIMEL200::tDiscreteRangeErrorDescription<nNIDMXS100::tCaseInsensitiveWString>, nidmxfu
+U, add, nNIMEL200::tDiscreteRangeErrorDescription<u32>, nidmxfu
+U, add, nNIMEL200::tDiscreteRangeErrorDescription<u64>, nidmxfu
+U, add, nNIMEL200::tDiscreteRangeErrorDescription<i64>, nidmxfu
+U, add, nNIMEL200::tEmptyRangeErrorDescription<f64>, nidmxfu
+U, add, nNIMEL200::tEmptyRangeErrorDescription<i32>, nidmxfu
+U, add, nNIMEL200::tEmptyRangeErrorDescription<nNIDMXS100::tCaseInsensitiveWString>, nidmxfu
+U, add, nNIMEL200::tEmptyRangeErrorDescription<u32>, nidmxfu
+U, add, nNIMEL200::tEmptyRangeErrorDescription<u64>, nidmxfu
+U, add, nNIMEL200::tEmptyRangeErrorDescription<i64>, nidmxfu
+U, add, nNIMEL200::tIntervalRangeErrorDescription<f64>, nidmxfu
+U, add, nNIMEL200::tIntervalRangeErrorDescription<i32>, nidmxfu
+U, add, nNIMEL200::tIntervalRangeErrorDescription<u32>, nidmxfu
+U, add, nNIMEL200::tIntervalRangeErrorDescription<u64>, nidmxfu
+U, add, nNIMEL200::tIntervalRangeErrorDescription<i64>, nidmxfu
+U, add, nNIMEL200::tRangeErrorDescription<f64>, nidmxfu
+U, add, nNIMEL200::tRangeErrorDescription<i32>, nidmxfu
+U, add, nNIMEL200::tRangeErrorDescription<nNIDMXS100::tCaseInsensitiveWString>, nidmxfu
+U, add, nNIMEL200::tRangeErrorDescription<u32>, nidmxfu
+U, add, nNIMEL200::tRangeErrorDescription<u64>, nidmxfu
+U, add, nNIMEL200::tRangeErrorDescription<i64>, nidmxfu
+
+U, add, nNIMS100::tChannelSpecification, nidmxfu
+U, add, nNIMS100::tChannelTaskSpecification, nidmxfu
+U, add, nNIMS100::tScaleSpecification, nidmxfu
+
+# U, add, nNIMSEL200::iInputProviderExpert, nidmxfu
+# U, add, nNIMSEL200::iOutputProviderExpert, nidmxfu
+# U, add, nNIMSEL200::iReaderExpert, nidmxfu
+# U, add, nNIMSEL200::iStreamExpert, nidmxfu
+# U, add, nNIMSEL200::iTerminalProviderExpert, nidmxfu
+# U, add, nNIMSEL200::iWriterExpert, nidmxfu
+U, add, nNIMSEL200::tTerminal, nidmxfu
+
+
+# Add Single-mode entries for Pharlap
+
+# S, add, nNIMAS100::iAttributeStateFacade, nidmxfp
+# S, add, nNIMAS100::iBufferAttributeAccessor, nidmxfp
+# S, add, nNIMAS100::iChannelContextExpander, nidmxfp
+# S, add, nNIMAS100::iChannelManager, nidmxfp
+# S, add, nNIMAS100::iDevicePathManager, nidmxfp
+# S, add, nNIMAS100::iRuntimeController, nidmxfp
+# S, add, nNIMAS100::iSoftwareEventGenerator, nidmxfp
+# S, add, nNIMAS100::iStateAccessor, nidmxfp
+# S, add, nNIMAS100::iTaskDoneAccessor, nidmxfp
+# S, add, nNIMAS100::iTaskManager, nidmxfp
+
+# S, add, nNIMEL200::iAttributeRangeInitializer, nidmxfp
+# S, add, nNIMEL200::iAttributeTransaction, nidmxfu
+# S, add, nNIMEL200::iBufferExpert, nidmxfp
+# S, add, nNIMEL200::iChannelExpertMultiAttributeAccessor, nidmxfp
+# S, add, nNIMEL200::iChannelExpertScaler, nidmxfp
+# S, add, nNIMEL200::iControlProviderExpert, nidmxfp
+# S, add, nNIMEL200::iDeviceExpert, nidmxfp
+# S, add, nNIMEL200::iDeviceExpertAccessor, nidmxfp
+# S, add, nNIMEL200::iDeviceExpertMultiAttributeAccessor, nidmxfp
+# S, add, nNIMEL200::iTimingExpert, nidmxfp
+# S, add, nNIMEL200::iWatchdogExpert, nidmxfp
+S, add, nNIMEL200::tContinuousRangeErrorDescription<f64>, nidmxfp
+S, add, nNIMEL200::tContinuousRangeErrorDescription<i32>, nidmxfp
+S, add, nNIMEL200::tContinuousRangeErrorDescription<u32>, nidmxfp
+S, add, nNIMEL200::tContinuousRangeErrorDescription<u64>, nidmxfp
+S, add, nNIMEL200::tContinuousRangeErrorDescription<i64>, nidmxfp
+S, add, nNIMEL200::tDiscreteRangeErrorDescription<f64>, nidmxfp
+S, add, nNIMEL200::tDiscreteRangeErrorDescription<i32>, nidmxfp
+S, add, nNIMEL200::tDiscreteRangeErrorDescription<nNIDMXS100::tCaseInsensitiveWString>, nidmxfp
+S, add, nNIMEL200::tDiscreteRangeErrorDescription<u32>, nidmxfp
+S, add, nNIMEL200::tDiscreteRangeErrorDescription<u64>, nidmxfp
+S, add, nNIMEL200::tDiscreteRangeErrorDescription<i64>, nidmxfp
+S, add, nNIMEL200::tEmptyRangeErrorDescription<f64>, nidmxfp
+S, add, nNIMEL200::tEmptyRangeErrorDescription<i32>, nidmxfp
+S, add, nNIMEL200::tEmptyRangeErrorDescription<nNIDMXS100::tCaseInsensitiveWString>, nidmxfp
+S, add, nNIMEL200::tEmptyRangeErrorDescription<u32>, nidmxfp
+S, add, nNIMEL200::tEmptyRangeErrorDescription<u64>, nidmxfp
+S, add, nNIMEL200::tEmptyRangeErrorDescription<i64>, nidmxfp
+S, add, nNIMEL200::tIntervalRangeErrorDescription<f64>, nidmxfp
+S, add, nNIMEL200::tIntervalRangeErrorDescription<i32>, nidmxfp
+S, add, nNIMEL200::tIntervalRangeErrorDescription<u32>, nidmxfp
+S, add, nNIMEL200::tIntervalRangeErrorDescription<u64>, nidmxfp
+S, add, nNIMEL200::tIntervalRangeErrorDescription<i64>, nidmxfp
+S, add, nNIMEL200::tRangeErrorDescription<f64>, nidmxfp
+S, add, nNIMEL200::tRangeErrorDescription<i32>, nidmxfp
+S, add, nNIMEL200::tRangeErrorDescription<nNIDMXS100::tCaseInsensitiveWString>, nidmxfp
+S, add, nNIMEL200::tRangeErrorDescription<u32>, nidmxfp
+S, add, nNIMEL200::tRangeErrorDescription<u64>, nidmxfp
+S, add, nNIMEL200::tRangeErrorDescription<i64>, nidmxfp
+
+S, add, nNIMS100::tChannelSpecification, nidmxfp
+S, add, nNIMS100::tChannelTaskSpecification, nidmxfp
+S, add, nNIMS100::tScaleSpecification, nidmxfp
+
+# S, add, nNIMSEL200::iInputProviderExpert, nidmxfp
+# S, add, nNIMSEL200::iOutputProviderExpert, nidmxfp
+# S, add, nNIMSEL200::iReaderExpert, nidmxfp
+# S, add, nNIMSEL200::iStreamExpert, nidmxfp
+# S, add, nNIMSEL200::iTerminalProviderExpert, nidmxfp
+# S, add, nNIMSEL200::iWriterExpert, nidmxfp
+S, add, nNIMSEL200::tTerminal, nidmxfp
+
+
+# add the entries for the nimsl component
+U, add, nNIMSL100::tEmbeddedStatusStatusDescription, nidmxfu
+K, add, nNIMSL100::tEmbeddedStatusStatusDescription, nidmxfk
+S, add, nNIMSL100::tEmbeddedStatusStatusDescription, nidmxfp
+
+# nNIMSRL100 kernel-mode primitive settings classes
+K,add,nNIMSRL100::tBufferInputStreamKernelModeSettings,nidmxfk
+K,add,nNIMSRL100::tBufferOutputStreamKernelModeSettings,nidmxfk
+K,add,nNIMSRL100::tUserKernelProxyPrimitiveSettings,nidmxfk
+K,add,nNIMSRL100::tSimulatedSampleConsumerPrimitiveSettings,nidmxfk
+K,add,nNIMSRL100::tSimulatedSampleProducerPrimitiveSettings,nidmxfk
+
+# nNIMSRL100 user-mode primitive settings classes
+U,add,nNIMSRL100::tBufferInputStreamKernelModeSettings,nidmxfu
+U,add,nNIMSRL100::tBufferInputStreamUserModeSettings,nidmxfu
+U,add,nNIMSRL100::tBufferOutputStreamKernelModeSettings,nidmxfu
+U,add,nNIMSRL100::tBufferOutputStreamUserModeSettings,nidmxfu
+U,add,nNIMSRL100::tUserKernelProxyPrimitiveSettings,nidmxfu
+U,add,nNIMSRL100::tTransferStrategyPrimitiveSettings,nidmxfu
+U,add,nNIMSRL100::tCompressedTransferStrategyPrimitiveSettings,nidmxfu
+U,add,nNIMSRL100::tNetworkProxyPrimitiveSettings,nidmxfu
+U,add,nNIMSRL100::tSimulatedStreamPrimitiveSettings,nidmxfu
+U,add,nNIMSRL100::tSimulatedSampleConsumerPrimitiveSettings,nidmxfu
+U,add,nNIMSRL100::tSimulatedSampleProducerPrimitiveSettings,nidmxfu
+
+# nNIMSRL100 single-mode primitive settings classes
+S,add,nNIMSRL100::tBufferInputStreamKernelModeSettings,nidmxfp
+S,add,nNIMSRL100::tBufferOutputStreamKernelModeSettings,nidmxfp
+S,add,nNIMSRL100::tUserKernelProxyPrimitiveSettings,nidmxfp
+S,add,nNIMSRL100::tBufferInputStreamUserModeSettings,nidmxfp
+S,add,nNIMSRL100::tBufferOutputStreamUserModeSettings,nidmxfp
+S,add,nNIMSRL100::tTransferStrategyPrimitiveSettings,nidmxfp
+S,add,nNIMSRL100::tCompressedTransferStrategyPrimitiveSettings,nidmxfp
+S,add,nNIMSRL100::tNetworkProxyPrimitiveSettings,nidmxfp
+S,add,nNIMSRL100::tSimulatedStreamPrimitiveSettings,nidmxfp
+S,add,nNIMSRL100::tSimulatedSampleConsumerPrimitiveSettings,nidmxfp
+S,add,nNIMSRL100::tSimulatedSampleProducerPrimitiveSettings,nidmxfp
+
+# nNIMSRL100 stream classes
+U,add,nNIMSRL100::tInputStreamProxy,nidmxfu
+S,add,nNIMSRL100::tInputStreamProxy,nidmxfp
+U,add,nNIMSRL100::tInputStreamNetworkProxy,nidmxfu
+U,add,nNIMSRL100::tOutputStreamProxy,nidmxfu
+S,add,nNIMSRL100::tOutputStreamProxy,nidmxfp
+U,add,nNIMSRL100::tOutputStreamNetworkProxy,nidmxfu
+U,add,nNIMSRL100::tBufferInputStreamNetworkProxy,nidmxfu
+U,add,nNIMSRL100::tBufferOutputStreamNetworkProxy,nidmxfu
+
+# nNIMSRL network version class
+U,add,nNIMSRL100::tNetworkVersion,nidmxfu
+S,add,nNIMSRL100::tNetworkVersion,nidmxfp
+
+# Now add entries for the supervisors.
+
+# nNIMSRL100::tBufferInputStreamUserModeSupervisor
+U,add,nNIMSRL100::tBufferInputStreamUserModeSupervisor,nidmxfu
+S,add,nNIMSRL100::tBufferInputStreamUserModeSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferInputStreamKernelModeSupervisor
+K,add,nNIMSRL100::tBufferInputStreamKernelModeSupervisor,nidmxfk
+S,add,nNIMSRL100::tBufferInputStreamKernelModeSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferInputStreamTransferStrategyPrimitiveSupervisor
+U,add,nNIMSRL100::tBufferInputStreamTransferStrategyPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tBufferInputStreamTransferStrategyPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferOutputStreamUserModeSupervisor
+U,add,nNIMSRL100::tBufferOutputStreamUserModeSupervisor,nidmxfu
+S,add,nNIMSRL100::tBufferOutputStreamUserModeSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferOutputStreamKernelModeSupervisor
+K,add,nNIMSRL100::tBufferOutputStreamKernelModeSupervisor,nidmxfk
+S,add,nNIMSRL100::tBufferOutputStreamKernelModeSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferOutputStreamTransferStrategyPrimitiveSupervisor
+U,add,nNIMSRL100::tBufferOutputStreamTransferStrategyPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tBufferOutputStreamTransferStrategyPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tInputStreamProxyPrimitiveSupervisor
+U,add,nNIMSRL100::tInputStreamProxyPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tInputStreamProxyPrimitiveSupervisor,nidmxfp
+U,add,nNIMSRL100::tInputStreamNetworkProxyPrimitiveSupervisor,nidmxfu
+
+# nNIMSRL100::tInputStreamDispatcherPrimitiveSupervisor
+K,add,nNIMSRL100::tInputStreamDispatcherPrimitiveSupervisor,nidmxfk
+S,add,nNIMSRL100::tInputStreamDispatcherPrimitiveSupervisor,nidmxfp
+U,add,nNIMSRL100::tInputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tInputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tInputStreamTransferStrategyPrimitiveSupervisor
+U,add,nNIMSRL100::tInputStreamTransferStrategyPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tInputStreamTransferStrategyPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tCompressedTransferStrategy
+U,add,nNIMSRL100::tCompressedTransferStrategy<u8>,nidmxfu
+S,add,nNIMSRL100::tCompressedTransferStrategy<u8>,nidmxfp
+U,add,nNIMSRL100::tCompressedTransferStrategy<u16>,nidmxfu
+S,add,nNIMSRL100::tCompressedTransferStrategy<u16>,nidmxfp
+U,add,nNIMSRL100::tCompressedTransferStrategy<u32>,nidmxfu
+S,add,nNIMSRL100::tCompressedTransferStrategy<u32>,nidmxfp
+
+# nNIMSRL100::tMemBlockReferencePrimitiveSupervisor
+K,add,nNIMSRL100::tMemBlockReferencePrimitiveSupervisor,nidmxfk
+U,add,nNIMSRL100::tMemBlockReferencePrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tMemBlockReferencePrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tOutputStreamProxyPrimitiveSupervisor
+U,add,nNIMSRL100::tOutputStreamProxyPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tOutputStreamProxyPrimitiveSupervisor,nidmxfp
+U,add,nNIMSRL100::tOutputStreamNetworkProxyPrimitiveSupervisor,nidmxfu
+
+# nNIMSRL100::tOutputStreamDispatcherPrimitiveSupervisor
+K,add,nNIMSRL100::tOutputStreamDispatcherPrimitiveSupervisor,nidmxfk
+S,add,nNIMSRL100::tOutputStreamDispatcherPrimitiveSupervisor,nidmxfp
+U,add,nNIMSRL100::tOutputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tOutputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tOutputStreamTransferStrategyPrimitiveSupervisor
+U,add,nNIMSRL100::tOutputStreamTransferStrategyPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tOutputStreamTransferStrategyPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferInputStreamNetworkProxyPrimitiveSupervisor
+U,add,nNIMSRL100::tBufferInputStreamNetworkProxyPrimitiveSupervisor,nidmxfu
+
+# nNIMSRL100::tBufferInputStreamNetworkDispatcherPrimitiveSupervisor
+U,add,nNIMSRL100::tBufferInputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tBufferInputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfp
+
+# nNIMSRL100::tBufferOutputStreamNetworkProxyPrimitiveSupervisor
+U,add,nNIMSRL100::tBufferOutputStreamNetworkProxyPrimitiveSupervisor,nidmxfu
+
+# nNIMSRL100::tBufferOutputStreamNetworkDispatcherPrimitiveSupervisor
+U,add,nNIMSRL100::tBufferOutputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tBufferOutputStreamNetworkDispatcherPrimitiveSupervisor,nidmxfp
+
+# simulated stream primitive supervisors
+U,add,nNIMSRL100::tSimulatedInputStreamPrimitiveSupervisor,nidmxfu
+U,add,nNIMSRL100::tSimulatedOutputStreamPrimitiveSupervisor,nidmxfu
+K,add,nNIMSRL100::tSimulatedSampleConsumerPrimitiveSupervisor,nidmxfk
+K,add,nNIMSRL100::tSimulatedSampleProducerPrimitiveSupervisor,nidmxfk
+S,add,nNIMSRL100::tSimulatedInputStreamPrimitiveSupervisor,nidmxfp
+S,add,nNIMSRL100::tSimulatedOutputStreamPrimitiveSupervisor,nidmxfp
+S,add,nNIMSRL100::tSimulatedSampleConsumerPrimitiveSupervisor,nidmxfp
+S,add,nNIMSRL100::tSimulatedSampleProducerPrimitiveSupervisor,nidmxfp
+
+# DCL Dummy Driver classes
+U, add, nNIDCL100::tMRLDeviceClientFactory, nidmxfu
+S, add, nNIDCL100::tMRLDeviceClientFactory, nidmxfp
+K, add, nNIDCL100::tDummyDriver, nidmxfk
+S, add, nNIDCL100::tDummyDriver, nidmxfp
+U, add, nNIDCL100::tDummyDriverClient, nidmxfu
+S, add, nNIDCL100::tDummyDriverClient, nidmxfp
+U, add, nNIDCL100::tDummyDriverInitializer, nidmxfu
+S, add, nNIDCL100::tDummyDriverInitializer, nidmxfp
+K, add, nNIDCL100::tDummyDriverGUIDIdentifier, nidmxfk
+S, add, nNIDCL100::tDummyDriverGUIDIdentifier, nidmxfp
+
+# Logging-related classes
+U,add,nNIMSRL100::tLoggingPrimitiveSettings,nidmxfu
+S,add,nNIMSRL100::tLoggingPrimitiveSettings,nidmxfp
+U,add,nNIMSRL100::tLoggingPrimitiveSupervisor,nidmxfu
+S,add,nNIMSRL100::tLoggingPrimitiveSupervisor,nidmxfp
+
+# Events Related Classes
+
+# Experts are not orb created so they are
+# not enumerated here.
+
+# Primitive Settings
+U, add, nNIMSRL100::tSchedulerActionPrimitiveSettings, nidmxfu
+K, add, nNIMSRL100::tSchedulerActionPrimitiveSettings, nidmxfk
+S, add, nNIMSRL100::tSchedulerActionPrimitiveSettings, nidmxfp
+U, add, nNIMSRL100::tSchedulerActionPrimitiveSettings2, nidmxfu
+K, add, nNIMSRL100::tSchedulerActionPrimitiveSettings2, nidmxfk
+S, add, nNIMSRL100::tSchedulerActionPrimitiveSettings2, nidmxfp
+
+U, add, nNIMSRL100::tEveryNSamplesEventSupervisorSettings, nidmxfu
+S, add, nNIMSRL100::tEveryNSamplesEventSupervisorSettings, nidmxfp
+
+# Supervisors
+U, add, nNIMSRL100::tSchedulerActionSupervisor, nidmxfu
+K, add, nNIMSRL100::tSchedulerActionSupervisor, nidmxfk
+S, add, nNIMSRL100::tSchedulerActionSupervisor, nidmxfp
+
+U, add, nNIMSRL100::tEveryNSamplesEventSupervisor, nidmxfu
+S, add, nNIMSRL100::tEveryNSamplesEventSupervisor, nidmxfp
+
+# Legacy MSTS classes
+U, add, nNIMSTS100::iVariantData, nidmxfu
+U, add, nNIMSTS100::tVariantAttributeData<i32>, nidmxfu
+U, add, nNIMSTS100::tVariantAttributeData<u32>, nidmxfu
+U, add, nNIMSTS100::tVariantAttributeData<u64>, nidmxfu
+U, add, nNIMSTS100::tVariantAttributeData<f64>, nidmxfu
+U, add, nNIMSTS100::tVariantAttributeData<_STL::wstring>, nidmxfu
+U, add, nNIMSTS100::tDeviceGUIDStatusDescription, nidmxfu
+U, add, nNIMSTS100::tConflictingAttributesStatusDescription, nidmxfu
+U, add, nNIMSTS100::tGenericStatusDescription, nidmxfu
+U, add, nNIMSTS100::tGenericStatusDescriptionWithF64, nidmxfu
+K, add, nNIMSTS100::tDeviceGUIDStatusDescription, nidmxfk
+K, add, nNIMSTS100::tGenericStatusDescription, nidmxfk
+S, add, nNIMSTS100::iVariantData, nidmxfp
+S, add, nNIMSTS100::tVariantAttributeData<i32>, nidmxfp
+S, add, nNIMSTS100::tVariantAttributeData<u32>, nidmxfp
+S, add, nNIMSTS100::tVariantAttributeData<u64>, nidmxfp
+S, add, nNIMSTS100::tVariantAttributeData<f64>, nidmxfp
+S, add, nNIMSTS100::tVariantAttributeData<_STL::wstring>, nidmxfp
+S, add, nNIMSTS100::tDeviceGUIDStatusDescription, nidmxfp
+S, add, nNIMSTS100::tConflictingAttributesStatusDescription, nidmxfp
+S, add, nNIMSTS100::tGenericStatusDescription, nidmxfp
+S, add, nNIMSTS100::tGenericStatusDescriptionWithF64, nidmxfp
+
+# add the entries for the nimerc component
+U, add, nNIMERC100::iStringResource, nidmxfu
+U, add, nNIMERC100::tStringResourceBase, nidmxfu
+S, add, nNIMERC100::iStringResource, nidmxfp
+S, add, nNIMERC100::tStringResourceBase, nidmxfp
+
+# End of script.
+

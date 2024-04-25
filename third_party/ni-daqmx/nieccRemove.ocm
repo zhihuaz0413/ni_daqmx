@@ -1,0 +1,11 @@
+#******************************************************************************
+# nieccRemove.ocm
+#
+# Copyright (c) 2010-,
+# National Instruments Corporation.
+# All rights reserved.
+#******************************************************************************
+
+K, deletelib, niecck
+S, deletelib, nieccp
+U, deletelib, nieccu

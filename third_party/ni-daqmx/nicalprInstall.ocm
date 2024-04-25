@@ -1,0 +1,75 @@
+#
+#   This file contains the information to install classes into the ORB
+#   using the orbClassMap.exe utility.
+#
+
+# clear any previous entries
+U, deletelib, nicalpru
+
+# add the user-mode entries for the nicalpr component
+U, add, nNICALPR100::tCalibrationManager, nicalpru
+U, add, nNICALPR100::tCalibrationManagerWithReferenceVoltage, nicalpru
+U, add, nNICALPR100::tDataCollector, nicalpru
+U, add, nNICALPR100::tACDCEstimatorDataProcessor, nicalpru
+U, add, nNICALPR100::tACEstimatorDataProcessor, nicalpru
+U, add, nNICALPR100::tAveragingDataProcessor, nicalpru
+U, add, nNICALPR100::tChannelSeperatingDataProcessor, nicalpru
+U, add, nNICALPR100::tCombineDataDataProcessor, nicalpru
+U, add, nNICALPR100::tDataDuplicatorDataProcessor, nicalpru
+U, add, nNICALPR100::tDCEstimatorDataProcessor, nicalpru
+U, add, nNICALPR100::tDutyCycleDataProcessor, nicalpru
+U, add, nNICALPR100::tAIDataSupplier, nicalpru
+U, add, nNICALPR100::tAIReferenceDataSupplier, nicalpru
+U, add, nNICALPR100::tAODataSupplier, nicalpru
+U, add, nNICALPR100::tCalInputDataSupplier, nicalpru
+U, add, nNICALPR100::tCalUserMeasuredInputDataSupplier, nicalpru
+U, add, nNICALPR100::tSelfCalCommandDataSupplier, nicalpru
+U, add, nNICALPR100::tBaseScalingStorageStrategy, nicalpru
+U, add, nNICALPR100::tDivideActualByMeasuredStorageStrategy, nicalpru
+U, add, nNICALPR100::tDivideMeasuredByActualStorageStrategy, nicalpru
+U, add, nNICALPR100::tLinearMeasuredVsCodesStorageStrategy, nicalpru
+U, add, nNICALPR100::tMidscaleOffsetStorageStrategy, nicalpru
+U, add, nNICALPR100::tPassThroughFormattingStorageStrategy, nicalpru
+U, add, nNICALPR100::tPassThroughStorageStrategy, nicalpru
+U, add, nNICALPR100::tTwoPointGainStorageStrategy, nicalpru
+U, add, nNICALPR100::tUnscaledOffsetStorageStrategy, nicalpru
+U, add, nNICALPR100::tAITaskFacade, nicalpru
+U, add, nNICALPR100::tAOTaskFacade, nicalpru
+U, add, nNICALPR100::tPwrTaskFacade, nicalpru
+U, add, nNICALPR100::tCalibrationTaskFacade, nicalpru
+U, add, nNICALPR100::tRemoveOffsetFromMeasuredStorageStrategy, nicalpru
+
+# clear any previous entries
+S, deletelib,nicalprp
+# add the single-mode entries for the nicalpr component
+S, add, nNICALPR100::tCalibrationManager, nicalprp
+S, add, nNICALPR100::tCalibrationManagerWithReferenceVoltage, nicalprp
+S, add, nNICALPR100::tDataCollector, nicalprp
+S, add, nNICALPR100::tACDCEstimatorDataProcessor, nicalprp
+S, add, nNICALPR100::tACEstimatorDataProcessor, nicalprp
+S, add, nNICALPR100::tAveragingDataProcessor, nicalprp
+S, add, nNICALPR100::tChannelSeperatingDataProcessor, nicalprp
+S, add, nNICALPR100::tCombineDataDataProcessor, nicalprp
+S, add, nNICALPR100::tDataDuplicatorDataProcessor, nicalprp
+S, add, nNICALPR100::tDCEstimatorDataProcessor, nicalprp
+S, add, nNICALPR100::tDutyCycleDataProcessor, nicalprp
+S, add, nNICALPR100::tAIDataSupplier, nicalprp
+S, add, nNICALPR100::tAIReferenceDataSupplier, nicalprp
+S, add, nNICALPR100::tAODataSupplier, nicalprp
+S, add, nNICALPR100::tCalInputDataSupplier, nicalprp
+S, add, nNICALPR100::tCalUserMeasuredInputDataSupplier, nicalprp
+S, add, nNICALPR100::tSelfCalCommandDataSupplier, nicalprp
+S, add, nNICALPR100::tBaseScalingStorageStrategy, nicalprp
+S, add, nNICALPR100::tDivideActualByMeasuredStorageStrategy, nicalprp
+S, add, nNICALPR100::tDivideMeasuredByActualStorageStrategy, nicalprp
+S, add, nNICALPR100::tLinearMeasuredVsCodesStorageStrategy, nicalprp
+S, add, nNICALPR100::tMidscaleOffsetStorageStrategy, nicalprp
+S, add, nNICALPR100::tPassThroughFormattingStorageStrategy, nicalprp
+S, add, nNICALPR100::tPassThroughStorageStrategy, nicalprp
+S, add, nNICALPR100::tTwoPointGainStorageStrategy, nicalprp
+S, add, nNICALPR100::tUnscaledOffsetStorageStrategy, nicalprp
+S, add, nNICALPR100::tAITaskFacade, nicalprp
+S, add, nNICALPR100::tAOTaskFacade, nicalprp
+S, add, nNICALPR100::tPwrTaskFacade, nicalprp
+S, add, nNICALPR100::tCalibrationTaskFacade, nicalprp
+S, add, nNICALPR100::tRemoveOffsetFromMeasuredStorageStrategy, nicalprp

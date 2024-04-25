@@ -1,0 +1,13 @@
+# nilmsRemove.ocm - this file contains script commands
+#   for orbClassMap to unregister all DMXF classes.
+
+# Delete any existing entries.
+
+U, deletelib, nilmsu
+S, deletelib, nilmsp
+K, deletelib, nilmsk
+
+# Add the new entries.
+
+# End of script.
+

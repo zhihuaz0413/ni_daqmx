@@ -1,0 +1,13 @@
+# Clear out any existing entries
+U, deletelib, nimsdxu
+S, deletelib, nimsdxp
+
+#experts
+U, add, nNIMSDX100::iInputDMADataTransferExpert, nimsdxu
+U, add, nNIMSDX100::tInputDMADataTransferExpert, nimsdxu
+U, add, nNIMSDX100::iOutputDMADataTransferExpert, nimsdxu
+U, add, nNIMSDX100::tOutputDMADataTransferExpert, nimsdxu
+S, add, nNIMSDX100::iInputDMADataTransferExpert, nimsdxp
+S, add, nNIMSDX100::tInputDMADataTransferExpert, nimsdxp
+S, add, nNIMSDX100::iOutputDMADataTransferExpert, nimsdxp
+S, add, nNIMSDX100::tOutputDMADataTransferExpert, nimsdxp

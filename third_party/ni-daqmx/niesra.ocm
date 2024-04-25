@@ -1,0 +1,16 @@
+K, deletelib, niesrk
+S, deletelib, niesrp
+S, deletelib, niesxp
+U, deletelib, niesru
+U, deletelib, niesxu
+K, add, nNIESR100::nNIEOL_1_0::tEOLDriver, niesrk
+S, add, nNIESR100::nNIEOL_1_0::tEOLDriverClient, niesrp
+S, add, nNIESR100::nNIEOL_1_0::tEOLDriverInitializer, niesrp
+S, add, nNIESR100::nNIEOL_1_0::tEOLDriver, niesrp
+S, add, nNIESR100::nNIEOL_1_0::tEOLPhysicalChannelMapper, niesrp
+S, add, nNIESR100::nNIEOL_1_0::tEOLPhysicalChannelSupplier, niesrp
+U, add, nNIESR100::nNIEOL_1_0::tEOLDriverClient, niesru
+U, add, nNIESR100::nNIEOL_1_0::tEOLDriverInitializer, niesru
+U, add, nNIESR100::nNIEOL_1_0::tEOLDriver, niesru
+U, add, nNIESR100::nNIEOL_1_0::tEOLPhysicalChannelMapper, niesru
+U, add, nNIESR100::nNIEOL_1_0::tEOLPhysicalChannelSupplier, niesru
