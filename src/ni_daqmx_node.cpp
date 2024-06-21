@@ -24,7 +24,8 @@
 
 #include "config.pb.h"
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
+#include "fsr_interfaces/msg/ni_force.hpp"
+#include "fsr_interfaces/srv/record_force.hpp"
 #include "niforce.pb.h"
 #include "ni_daqmx.hpp"
 
@@ -35,9 +36,11 @@ class niDaqmx : public rclcpp::Node {
  public:
   niDaqmx()
   : Node("ni_daqmx") {
-    publisher_ = this->create_publisher<std_msgs::msg::String>("ni_force", 10);
+    publisher_ = this->create_publisher<fsr_interfaces::msg::NiForce >("ni_force", 2);
+    record_service_ = this->create_service<fsr_interfaces::srv::RecordForce>("record_force",
+      std::bind(&niDaqmx::record_force, this, std::placeholders::_1, std::placeholders::_2));
     timer_ = this->create_wall_timer(
-        10ms, std::bind(&niDaqmx::timer_callback, this));
+        1ms, std::bind(&niDaqmx::timer_callback, this));
     std::filesystem::path ws_dir = std::filesystem::current_path();
     std::string config_file = ws_dir.string() + "/src/ni_daqmx/config/config.prototxt";
     int fd = open(config_file.c_str(), O_RDONLY);
@@ -56,7 +59,23 @@ class niDaqmx : public rclcpp::Node {
     niforce_.mutable_torque()->set_x(data[3]);
     niforce_.mutable_torque()->set_y(data[4]);
     niforce_.mutable_torque()->set_z(data[5]);
-    niforce_.set_timestamp(std::to_string(timestamp_sec+timestamp_nsec*1e-9));
+    niforce_.set_timestamp(std::to_string(timestamp_sec*1e+9+timestamp_nsec));
+
+
+    if (record_) {
+      auto force = msg_force_.add_force();
+      force->CopyFrom(niforce_);
+      if (msg_force_.force_size() > 1000*6000) {
+        std::string record_file = save_folder_ + "_" + std::to_string(timestamp_sec*1e+9+timestamp_nsec) + ".bin";  
+        std::ofstream ofs(record_file, std::ios::out | std::ios::app);
+        if (ofs.is_open()) {
+          msg_force_.SerializeToOstream(&ofs);
+          ofs.close();
+          msg_force_.clear_force();
+        }
+      }
+    }
+
     //print only once every 1000 samples
     // static int j=0;
     // if(j++%1000==0) {
@@ -65,25 +84,58 @@ class niDaqmx : public rclcpp::Node {
     // }	
   }
 
+  void record_force(const std::shared_ptr<fsr_interfaces::srv::RecordForce::Request> request,
+                    std::shared_ptr<fsr_interfaces::srv::RecordForce::Response> response) {
+    if (request->record) {
+      record_ = true;
+      save_folder_ = request->folder + "/ni_daqmx/";
+      if (!std::filesystem::exists(save_folder_)) {
+        std::filesystem::create_directories(save_folder_);
+      }
+      save_folder_ += request->labels;
+      msg_force_.clear_force();
+      response->success = true;
+    } else {
+      record_ = false;
+      rclcpp::Time now = this->get_clock()->now();
+      std::string record_file = save_folder_ + ".bin";
+      std::ofstream ofs(record_file, std::ios::out | std::ios::trunc);
+      if (ofs.is_open()) {
+        msg_force_.SerializeToOstream(&ofs);
+        ofs.close();
+        response->success = true;
+      } else {
+        response->success = false;
+      }
+    }
+  }
+
  private:
   void timer_callback() {
-    auto msg = std_msgs::msg::String();
     if (config_.verbose()) {
       std::string prototextOutput;
       google::protobuf::TextFormat::PrintToString(niforce_, &prototextOutput);
       std::cout << prototextOutput << std::endl;
     }
-    if (niforce_.SerializeToString(&msg.data)) {
-      publisher_->publish(msg);
-    } else {
-      RCLCPP_INFO(this->get_logger(), "Serialization wrong!!!");
-    }
+    fsr_interfaces::msg::NiForce force_msg;
+    force_msg.timestamp = niforce_.timestamp();
+    force_msg.force.x = niforce_.force().x();
+    force_msg.force.y = niforce_.force().y();
+    force_msg.force.z = niforce_.force().z();
+    force_msg.torque.x = niforce_.torque().x();
+    force_msg.torque.y = niforce_.torque().y();
+    force_msg.torque.z = niforce_.torque().z();
+    publisher_->publish(force_msg);
   }
 
-  rclcpp::TimerBase::SharedPtr timer_;
+  rclcpp::TimerBase::SharedPtr timer_ = nullptr;
   inline static ni_daqmx::NiForce niforce_;
+  inline static bool record_ = false;
+  inline static ni_daqmx::MsgForce msg_force_;
+  inline static std::string save_folder_ = "";
   ni_daqmx::NiConfig config_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+  rclcpp::Publisher<fsr_interfaces::msg::NiForce>::SharedPtr publisher_;
+  rclcpp::Service<fsr_interfaces::srv::RecordForce>::SharedPtr record_service_;
 };
 
 int main(int argc, char * argv[]) {

@@ -12,3 +12,7 @@ message NiForce {
   Vector3d force = 2;
   Vector3d torque = 3;
 }
+
+message MsgForce {
+  repeated NiForce force = 1;
+}
