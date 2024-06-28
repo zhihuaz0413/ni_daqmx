@@ -39,8 +39,8 @@ class DAQcard : virtual public ::ESC::CLI
     DAQcard(int n, int verbose = -1);
     ~DAQcard();
     void read(float64 *data,
-              int *timestamp_sec = nullptr,
-              int *timestamp_nsec = nullptr);
+              uint64_t *timestamp_sec = nullptr,
+              uint64_t *timestamp_nsec = nullptr);
     void set_samplingSize(int nb_samples) { m_samplingSize = nb_samples; }
 
     private:
@@ -84,45 +84,45 @@ class FT6_sensor : virtual public ESC::CLI
      * @return double The value of the sensor, in N or Nm
      */
     double get_FT(unsigned i,
-                  int *timestamp_sec = nullptr,
-                  int *timestamp_nsec = nullptr);
+                  uint64_t *timestamp_sec = nullptr,
+                  uint64_t *timestamp_nsec = nullptr);
 
     //Tz,Ty,Tx
     double get_torque(unsigned i,
-                      int *timestamp_sec = nullptr,
-                      int *timestamp_nsec = nullptr)
+                      uint64_t *timestamp_sec = nullptr,
+                      uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(i + 3, timestamp_sec, timestamp_nsec);
     }
     //Fz,Fy,Fx
     double get_force(unsigned i,
-                     int *timestamp_sec = nullptr,
-                     int *timestamp_nsec = nullptr)
+                     uint64_t *timestamp_sec = nullptr,
+                     uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(i, timestamp_sec, timestamp_nsec);
     }
 
-    double get_Fx(int *timestamp_sec = nullptr, int *timestamp_nsec = nullptr)
+    double get_Fx(uint64_t *timestamp_sec = nullptr, uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(0, timestamp_sec, timestamp_nsec);
     };
-    double get_Fy(int *timestamp_sec = nullptr, int *timestamp_nsec = nullptr)
+    double get_Fy(uint64_t *timestamp_sec = nullptr, uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(1, timestamp_sec, timestamp_nsec);
     };
-    double get_Fz(int *timestamp_sec = nullptr, int *timestamp_nsec = nullptr)
+    double get_Fz(uint64_t *timestamp_sec = nullptr, uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(2, timestamp_sec, timestamp_nsec);
     };
-    double get_Tx(int *timestamp_sec = nullptr, int *timestamp_nsec = nullptr)
+    double get_Tx(uint64_t *timestamp_sec = nullptr, uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(3, timestamp_sec, timestamp_nsec);
     };
-    double get_Ty(int *timestamp_sec = nullptr, int *timestamp_nsec = nullptr)
+    double get_Ty(uint64_t *timestamp_sec = nullptr, uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(4, timestamp_sec, timestamp_nsec);
     };
-    double get_Tz(int *timestamp_sec = nullptr, int *timestamp_nsec = nullptr)
+    double get_Tz(uint64_t *timestamp_sec = nullptr, uint64_t *timestamp_nsec = nullptr)
     {
         return get_FT(5, timestamp_sec, timestamp_nsec);
     };
@@ -131,7 +131,7 @@ class FT6_sensor : virtual public ESC::CLI
                                        int nb_samples,
                                        double *data,
                                        uint64_t timestamp_sec,
-                                       uint32_t timestamp_nsec,
+                                       uint64_t timestamp_nsec,
                                        void *obj),
                       void *obj)
     {
@@ -167,7 +167,7 @@ class FT6_sensor : virtual public ESC::CLI
                        int nb_samples,
                        double *data,
                        uint64_t timestamp_sec,
-                       uint32_t timestamp_nsec,
+                       uint64_t timestamp_nsec,
                        void *obj) = nullptr;
     void *m_callback_obj = nullptr;
     int m_nb_channels = 6;
@@ -177,7 +177,7 @@ class FT6_sensor : virtual public ESC::CLI
     double m_data[6];
     double m_data_conv[6];
     uint64_t m_timestamp_sec = 0;
-    uint32_t m_timestamp_nsec = 0;
+    uint64_t m_timestamp_nsec = 0;
     bool m_new_data[6] = {false};
     float m_calcoef[6][6] = {
         {-0.00758, -0.00595, 0.17292, -3.31572, -0.10515, 3.04384},

@@ -52,7 +52,7 @@ class niDaqmx : public rclcpp::Node {
   }
 
   static void sensor_callback(int nb_channels, int samplingSize, double* data,
-               uint64_t timestamp_sec, uint32_t timestamp_nsec, void* obj){
+               uint64_t timestamp_sec, uint64_t timestamp_nsec, void* obj){
     niforce_.mutable_force()->set_x(data[0]);
     niforce_.mutable_force()->set_y(data[1]);
     niforce_.mutable_force()->set_z(data[2]);
